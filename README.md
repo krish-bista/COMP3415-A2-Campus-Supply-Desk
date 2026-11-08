@@ -214,3 +214,26 @@ These commands use the same orders and stock as the interactive menu opened with
 python -m supplydesk --help
 python -m supplydesk quote --help
 ```
+## Assignment development and CR-01
+
+Express is available through the service API, individual commands, and interactive
+menu. It always costs CAD $12.00, even above the free-standard-delivery threshold.
+Student discounts apply only to merchandise. Pickup remains the default and is
+free. Standard delivery remains CAD $6.00, waived from CAD $100.00 after discounts.
+
+```sh
+python -m supplydesk quote --customer student --fulfillment express --item hoodie:2
+python -m supplydesk place --fulfillment express --item notebook:2
+python -m unittest discover -s tests -v
+```
+
+The express hoodie quote totals 8,400 cents. Commands place/cancel immediately.
+In the menu, choose express at the fulfillment prompt and confirm placement.
+No extra packages are required. Python 3.10 or newer is supported.
+
+Development stages are retained in Git tags. The original starter is commit
+82ed75e. Tags a2-baseline, a2-refactored, a2-defect-fixes, and a2-cr01 identify the
+test baseline, behavior-preserving refactoring, separate specification fixes,
+and express implementation. See evidence/ for dated logs and the prediction
+recorded before CR-01 implementation. The final test run includes the starter
+tests, service requirements, command/menu regressions, and CR-01 acceptance cases.

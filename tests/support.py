@@ -3,7 +3,6 @@
 from contextlib import redirect_stdout
 from io import StringIO
 from pathlib import Path
-import json
 import subprocess
 import sys
 import tempfile
@@ -31,10 +30,10 @@ class DeskTestCase(unittest.TestCase):
             if product["product_id"] == product_id
         )
 
-    def command(self, *arguments):
+    def command(self, *arguments, input_text=""):
         return subprocess.run(
             [sys.executable, "-B", "-m", "supplydesk", "--data", str(self.path), *arguments],
-            capture_output=True, text=True,
+            capture_output=True, text=True, input=input_text,
             cwd=Path(__file__).resolve().parents[1], timeout=10,
         )
 

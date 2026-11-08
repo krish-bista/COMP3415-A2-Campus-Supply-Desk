@@ -1,0 +1,59 @@
+Stage: 04-cr01
+UTC: 2026-11-08T02:53:23.931837+00:00
+Implementation HEAD: 9f88ae2e79bc68f9fd4b8539f893d5a22b951dc5
+Command: python -m unittest discover -s tests -p test*.py -v
+
+test_command_help_advertises_fee_and_choices (test_express.ExpressTests.test_command_help_advertises_fee_and_choices) ... ok
+test_commands_quote_place_show_list_cancel_express (test_express.ExpressTests.test_commands_quote_place_show_list_cancel_express) ... ok
+test_discount_threshold_and_rounding_exclude_express_fee (test_express.ExpressTests.test_discount_threshold_and_rounding_exclude_express_fee) ... ok
+test_fee_is_never_waived_at_standard_threshold (test_express.ExpressTests.test_fee_is_never_waived_at_standard_threshold) ... ok
+test_instructor_pricing_examples (test_express.ExpressTests.test_instructor_pricing_examples) ... ok
+test_invalid_express_requests_preserve_saved_state (test_express.ExpressTests.test_invalid_express_requests_preserve_saved_state) ... ok
+test_menu_confirms_and_cancels_express (test_express.ExpressTests.test_menu_confirms_and_cancels_express) ... ok
+test_menu_declined_express_order_does_not_save (test_express.ExpressTests.test_menu_declined_express_order_does_not_save) ... ok
+test_menu_prompt_advertises_express (test_express.ExpressTests.test_menu_prompt_advertises_express) ... ok
+test_menu_quote_and_place_express (test_express.ExpressTests.test_menu_quote_and_place_express) ... ok
+test_old_schema_one_save_accepts_new_express_order (test_express.ExpressTests.test_old_schema_one_save_accepts_new_express_order) ... ok
+test_quote_does_not_save_reserve_or_use_id (test_express.ExpressTests.test_quote_does_not_save_reserve_or_use_id) ... ok
+test_real_interactive_entry_point_accepts_express (test_express.ExpressTests.test_real_interactive_entry_point_accepts_express) ... ok
+test_snapshot_survives_lookup_reopen_history_and_cancellation (test_express.ExpressTests.test_snapshot_survives_lookup_reopen_history_and_cancellation) ... ok
+test_command_defaults_and_json (test_interfaces.InterfaceTests.test_command_defaults_and_json) ... ok
+test_command_rejects_invalid_quantity_and_fulfillment (test_interfaces.InterfaceTests.test_command_rejects_invalid_quantity_and_fulfillment) ... ok
+test_commands_place_and_cancel_immediately (test_interfaces.InterfaceTests.test_commands_place_and_cancel_immediately) ... ok
+test_menu_bad_quantity_can_be_reentered (test_interfaces.InterfaceTests.test_menu_bad_quantity_can_be_reentered) ... ok
+test_menu_declined_cancellation_preserves_state (test_interfaces.InterfaceTests.test_menu_declined_cancellation_preserves_state) ... ok
+test_menu_defaults_and_declined_order_do_not_save (test_interfaces.InterfaceTests.test_menu_defaults_and_declined_order_do_not_save) ... ok
+test_menu_end_of_input_and_interrupt_exit (test_interfaces.InterfaceTests.test_menu_end_of_input_and_interrupt_exit) ... ok
+test_menu_service_error_returns_to_menu (test_interfaces.InterfaceTests.test_menu_service_error_returns_to_menu) ... ok
+test_cancellation_preserves_snapshot_and_restores_stock (test_service.ServiceTests.test_cancellation_preserves_snapshot_and_restores_stock) ... ok
+test_catalog_and_quote_do_not_save_or_reserve (test_service.ServiceTests.test_catalog_and_quote_do_not_save_or_reserve) ... ok
+test_discount_at_exact_threshold (test_service.ServiceTests.test_discount_at_exact_threshold) ... ok
+test_discount_below_and_above_threshold (test_service.ServiceTests.test_discount_below_and_above_threshold) ... ok
+test_discount_rounds_half_cent_up_using_integer_money (test_service.ServiceTests.test_discount_rounds_half_cent_up_using_integer_money) ... ok
+test_duplicate_lines_at_stock_limit_are_preserved (test_service.ServiceTests.test_duplicate_lines_at_stock_limit_are_preserved) ... ok
+test_duplicate_lines_over_stock_rejected_by_placement (test_service.ServiceTests.test_duplicate_lines_over_stock_rejected_by_placement) ... ok
+test_duplicate_lines_over_stock_rejected_by_quote (test_service.ServiceTests.test_duplicate_lines_over_stock_rejected_by_quote) ... ok
+test_free_delivery_uses_discounted_merchandise (test_service.ServiceTests.test_free_delivery_uses_discounted_merchandise) ... ok
+test_historical_prices_do_not_follow_catalog_changes (test_service.ServiceTests.test_historical_prices_do_not_follow_catalog_changes) ... ok
+test_history_order_and_ids_survive_cancellation (test_service.ServiceTests.test_history_order_and_ids_survive_cancellation) ... ok
+test_invalid_quantities_preserve_saved_state_and_number (test_service.ServiceTests.test_invalid_quantities_preserve_saved_state_and_number) ... ok
+test_invalid_requests_do_not_create_a_save (test_service.ServiceTests.test_invalid_requests_do_not_create_a_save) ... ok
+test_late_invalid_item_preserves_prior_order_and_stock (test_service.ServiceTests.test_late_invalid_item_preserves_prior_order_and_stock) ... ok
+test_malformed_or_unreadable_save_reports_error (test_service.ServiceTests.test_malformed_or_unreadable_save_reports_error) ... ok
+test_placement_rechecks_stock_after_quote (test_service.ServiceTests.test_placement_rechecks_stock_after_quote) ... ok
+test_quantity_one_and_ninety_nine (test_service.ServiceTests.test_quantity_one_and_ninety_nine) ... ok
+test_quote_matches_placement (test_service.ServiceTests.test_quote_matches_placement) ... ok
+test_regular_customer_has_no_discount (test_service.ServiceTests.test_regular_customer_has_no_discount) ... ok
+test_repeated_cancellation_does_not_restore_stock_twice (test_service.ServiceTests.test_repeated_cancellation_does_not_restore_stock_twice) ... ok
+test_schema_one_save_reopens (test_service.ServiceTests.test_schema_one_save_reopens) ... ok
+test_standard_delivery_threshold_and_pickup (test_service.ServiceTests.test_standard_delivery_threshold_and_pickup) ... ok
+test_unknown_order_preserves_save (test_service.ServiceTests.test_unknown_order_preserves_save) ... ok
+test_cancel_order_restores_stock (test_smoke.OrderSmokeTests.test_cancel_order_restores_stock) ... ok
+test_order_can_be_reopened (test_smoke.OrderSmokeTests.test_order_can_be_reopened) ... ok
+test_regular_pickup_quote (test_smoke.OrderSmokeTests.test_regular_pickup_quote) ... ok
+test_student_delivery_quote (test_smoke.OrderSmokeTests.test_student_delivery_quote) ... ok
+
+----------------------------------------------------------------------
+Ran 49 tests in 3.592s
+
+OK
