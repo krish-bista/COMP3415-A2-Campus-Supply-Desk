@@ -1,0 +1,14 @@
+Stage: 00-starter
+UTC: 2026-11-08T02:44:55.291763+00:00
+Implementation HEAD: 82ed75e0714e50c086a13ee491f51b349814d8a4
+Command: python -m unittest discover -s tests -p test*.py -v
+
+test_cancel_order_restores_stock (test_smoke.OrderSmokeTests.test_cancel_order_restores_stock) ... ok
+test_order_can_be_reopened (test_smoke.OrderSmokeTests.test_order_can_be_reopened) ... ok
+test_regular_pickup_quote (test_smoke.OrderSmokeTests.test_regular_pickup_quote) ... ok
+test_student_delivery_quote (test_smoke.OrderSmokeTests.test_student_delivery_quote) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.095s
+
+OK

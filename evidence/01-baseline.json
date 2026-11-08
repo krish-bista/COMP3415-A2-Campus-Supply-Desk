@@ -1,0 +1,16 @@
+{
+  "stage": "01-baseline",
+  "utc": "2026-11-08T02:46:57.835517+00:00",
+  "commit": "82ed75e0714e50c086a13ee491f51b349814d8a4",
+  "pattern": "test*.py",
+  "tests": 35,
+  "failures": [
+    "test_service.ServiceTests.test_discount_at_exact_threshold (operation='quote')",
+    "test_service.ServiceTests.test_discount_at_exact_threshold (operation='place_order')",
+    "test_service.ServiceTests.test_duplicate_lines_over_stock_rejected_by_placement",
+    "test_service.ServiceTests.test_duplicate_lines_over_stock_rejected_by_quote",
+    "test_service.ServiceTests.test_repeated_cancellation_does_not_restore_stock_twice"
+  ],
+  "errors": [],
+  "skipped": []
+}
